@@ -1,8 +1,6 @@
 # Personal Task Manager
 
-**Project Code:** WST21-PM-2026-SF  
-**Student Name:** Ryan G. Sapanta  
-**Course & Year:** BSIT - 2
+## Description
 
 The Personal Task Manager is a Laravel web application for managing personal tasks.
 
@@ -33,6 +31,15 @@ Available statuses:
 - Pending
 - Completed
 
+## Technologies Used
+
+- Laravel
+- PHP
+- SQLite
+- Blade
+- HTML
+- GitHub Codespaces
+
 ## How the System Works
 
 The application follows the basic Laravel flow:
@@ -47,7 +54,7 @@ The routes are defined in:
 routes/web.php
 ```
 
-The route receives the user's request and decides which controller function should handle it.
+The routes receive the user's request and decide which controller function should handle it.
 
 For example:
 
@@ -151,79 +158,219 @@ Blade View
 Browser
 ```
 
-## Technologies Used
-
-- Laravel
-- PHP
-- SQLite
-- Blade
-- HTML
-- GitHub Codespaces
-
 ## Project Structure
 
 ```text
-app/
-├── Http/
-│   └── Controllers/
-│       └── TaskController.php
-└── Models/
-    └── Task.php
-
-resources/
-└── views/
-    └── tasks/
-        ├── index.blade.php
-        ├── create.blade.php
-        ├── edit.blade.php
-        └── updated.blade.php
-
-routes/
-└── web.php
-
-database/
-└── migrations/
-    └── 2026_09_25_154112_create_tasks_table.php
-
-public/
-└── index.php
+personal-task-manager/
+│
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       └── TaskController.php
+│   │
+│   └── Models/
+│       └── Task.php
+│
+├── database/
+│   ├── factories/
+│   ├── migrations/
+│   │   └── 2026_09_25_154112_create_tasks_table.php
+│   └── seeders/
+│
+├── resources/
+│   └── views/
+│       └── tasks/
+│           ├── index.blade.php
+│           ├── create.blade.php
+│           ├── edit.blade.php
+│           └── updated.blade.php
+│
+├── routes/
+│   └── web.php
+│
+├── public/
+│   └── index.php
+│
+├── screenshots/
+│   ├── add-task.png
+│   ├── delete-task.png
+│   ├── edit-task.png
+│   ├── task-list.png
+│   └── task-updated.png
+│
+├── .env.example
+├── artisan
+├── composer.json
+└── README.md
 ```
+
+## Screenshots
+
+### Task List
+
+This screenshot shows the Personal Task Manager with the list of tasks, task status, due date, Edit button, and Delete button.
+
+![Task List](screenshots/task-list.png)
+
+### Add New Task
+
+This screenshot shows the form for adding a new task.
+
+![Add New Task](screenshots/add-task.png)
+
+### Delete Task
+
+This screenshot shows the confirmation page after deleting a task.
+
+![Task Deleted](screenshots/delete-task.png)
+
+### Edit Task
+
+This screenshot shows the Edit Task form where the task information can be changed.
+
+![Edit Task](screenshots/edit-task.png)
+
+### Task Updated
+
+This screenshot shows the confirmation page after successfully updating a task.
+
+![Task Updated](screenshots/task-updated.png)
 
 ## How to Run
 
-1. Open the project in GitHub Codespaces.
+### 1. Open the Project
 
-2. Install the project dependencies:
+Open the project in GitHub Codespaces.
+
+### 2. Install Dependencies
+
+Run:
 
 ```bash
 composer install
 ```
 
-3. Create the environment file:
+### 3. Create the Environment File
+
+Run:
 
 ```bash
 cp .env.example .env
 ```
 
-4. Generate the application key:
+### 4. Generate the Application Key
+
+Run:
 
 ```bash
 php artisan key:generate
 ```
 
-5. Run the database migration:
+### 5. Run Database Migration
+
+Run:
 
 ```bash
 php artisan migrate
 ```
 
-6. Start the Laravel development server:
+### 6. Start the Laravel Server
+
+Run:
 
 ```bash
 php artisan serve --host=0.0.0.0 --port=8000
 ```
 
-7. Open port `8000` from the GitHub Codespaces Ports tab.
+### 7. Open the Application
+
+Open port `8000` from the GitHub Codespaces **Ports** tab and open the application in the browser.
+
+## Task Management
+
+The application supports the following task operations:
+
+### Add Task
+
+Users can enter:
+
+- Task Name
+- Description
+- Due Date
+
+New tasks are automatically given the status:
+
+```text
+Pending
+```
+
+### View Tasks
+
+The task list displays all saved tasks along with their:
+
+- Task Name
+- Description
+- Status
+- Due Date
+
+### Edit Task
+
+Users can edit the task name, description, status, and due date.
+
+### Delete Task
+
+Users can delete a task from the task list using the Delete button.
+
+### Change Status
+
+Users can change a task status between:
+
+```text
+Pending
+Completed
+```
+
+## Laravel Components Used
+
+### Route
+
+Routes are defined in:
+
+```text
+routes/web.php
+```
+
+### Controller
+
+The main controller is:
+
+```text
+app/Http/Controllers/TaskController.php
+```
+
+### Model
+
+The model is:
+
+```text
+app/Models/Task.php
+```
+
+### Migration
+
+The database table is created using:
+
+```text
+database/migrations/2026_09_25_154112_create_tasks_table.php
+```
+
+### Blade Views
+
+The application uses Laravel Blade views located in:
+
+```text
+resources/views/tasks/
+```
 
 ## Author
 

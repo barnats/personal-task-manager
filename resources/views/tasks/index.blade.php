@@ -16,7 +16,7 @@
         @foreach ($tasks as $task)
 
             <div>
-                <h3>{{ $task->task_name }}</h3>
+                <h3>{{ $task->task_name }}</h3> 
 
                 <p>{{ $task->description }}</p>
 
