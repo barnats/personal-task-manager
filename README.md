@@ -1,5 +1,17 @@
 # Personal Task Manager
 
+## Project Code
+
+WST21-PM-2026-SF
+
+## Student Name
+
+Ryan G. Sapanta
+
+## Course & Year
+
+BSIT - 2
+
 ## Description
 
 The Personal Task Manager is a Laravel web application for managing personal tasks.
